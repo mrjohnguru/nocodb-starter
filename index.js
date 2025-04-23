@@ -9,3 +9,5 @@ const port = process.env.PORT || 8080;
   });
   app.use(await Noco.init({}, server, app));
 })();
+app.get('/', (req, res) => res.redirect('/dashboard'));
+
